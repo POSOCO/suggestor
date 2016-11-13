@@ -13,11 +13,11 @@ function Suggest(str){
 }
 
 function solve(){
-	line_flow_Akola_Aurangabad_MW = document.getElementById("line_flow_Akola_Aurangabad_MW").value;
-	line_flow_Wardha_Aurangabad_MW = document.getElementById("line_flow_Wardha_Aurangabad_MW").value;
-	Voltage_of_Aurangabad_KV = document.getElementById("Voltage_of_Aurangabad_KV").value;
-	line_flow_Wardha_Parli_MW = document.getElementById("line_flow_Wardha_Parli_MW").value;
-	Voltage_Parli_KV = document.getElementById("Voltage_Parli_KV").value;
+	line_flow_Akola_Aurangabad_MW = +document.getElementById("line_flow_Akola_Aurangabad_MW").value;
+	line_flow_Wardha_Aurangabad_MW = +document.getElementById("line_flow_Wardha_Aurangabad_MW").value;
+	Voltage_of_Aurangabad_KV = +document.getElementById("Voltage_of_Aurangabad_KV").value;
+	line_flow_Wardha_Parli_MW = +document.getElementById("line_flow_Wardha_Parli_MW").value;
+	Voltage_Parli_KV = +document.getElementById("Voltage_Parli_KV").value;
 
 	if(line_flow_Akola_Aurangabad_MW >= 600){
 		Suggest("Increase Koyna generation");
@@ -44,4 +44,3 @@ function solve(){
 	}
 	alert(suggestionsArray_.join("\n\n"));
 }
-
