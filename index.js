@@ -13,6 +13,7 @@ function Suggest(str){
 }
 
 function solve(){
+	suggestionsArray_ = [];
 	line_flow_Akola_Aurangabad_MW = +document.getElementById("line_flow_Akola_Aurangabad_MW").value;
 	line_flow_Wardha_Aurangabad_MW = +document.getElementById("line_flow_Wardha_Aurangabad_MW").value;
 	Voltage_of_Aurangabad_KV = +document.getElementById("Voltage_of_Aurangabad_KV").value;
@@ -42,5 +43,12 @@ function solve(){
 		}
 		Suggest("Increase Talcher Kolar Flow");
 	}
+	if(suggestionsArray_.length == 0){
+		Suggest("Be Alert...");
+	}
+	displaySuggestions();
+}
+
+function displaySuggestions(){
 	alert(suggestionsArray_.join("\n\n"));
 }
