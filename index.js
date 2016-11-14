@@ -14,17 +14,25 @@ function Suggest(str){
 	}
 }
 
-// Core Function
-function solve(){
-	// First clear the suggestions List
-	suggestionsArray_ = [];
-	
-	// Get the input variables from the html page
+// Get the input variables from the html page
+function getVariablesFromPage(){
 	line_flow_Akola_Aurangabad_MW = +document.getElementById("line_flow_Akola_Aurangabad_MW").value;
 	line_flow_Wardha_Aurangabad_MW = +document.getElementById("line_flow_Wardha_Aurangabad_MW").value;
 	voltage_of_Aurangabad_KV = +document.getElementById("voltage_of_Aurangabad_KV").value;
 	line_flow_Wardha_Parli_MW = +document.getElementById("line_flow_Wardha_Parli_MW").value;
 	voltage_Parli_KV = +document.getElementById("voltage_Parli_KV").value;
+}
+
+// Core Function
+function solve(){
+	// First clear the suggestions List
+	suggestionsArray_ = [];
+	
+	//Clear the console
+	clearConsole();
+	
+	// Get the input variables from the html page
+	getVariablesFromPage();
 	
 	// Execute the algorithm
 	if(line_flow_Akola_Aurangabad_MW >= 600){
@@ -60,5 +68,8 @@ function solve(){
 
 // Utility Function
 function displaySuggestions(){
-	alert(suggestionsArray_.join("\n\n"));
+	for(var i=0;i<suggestionsArray_.length;i++){
+		WriteLineConsole(suggestionsArray_[i]);
+		WriteLineConsole("");
+	}	
 }
