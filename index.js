@@ -1,9 +1,9 @@
 // Declaring the global variables
 var line_flow_Akola_Aurangabad_MW = 600;
 var line_flow_Wardha_Aurangabad_MW = 1500;
-var Voltage_of_Aurangabad_KV = 750;
+var voltage_of_Aurangabad_KV = 750;
 var line_flow_Wardha_Parli_MW = 600;
-var Voltage_Parli_KV = 450;
+var voltage_Parli_KV = 450;
 
 var suggestionsArray_ = [];
 
@@ -22,9 +22,9 @@ function solve(){
 	// Get the input variables from the html page
 	line_flow_Akola_Aurangabad_MW = +document.getElementById("line_flow_Akola_Aurangabad_MW").value;
 	line_flow_Wardha_Aurangabad_MW = +document.getElementById("line_flow_Wardha_Aurangabad_MW").value;
-	Voltage_of_Aurangabad_KV = +document.getElementById("Voltage_of_Aurangabad_KV").value;
+	voltage_of_Aurangabad_KV = +document.getElementById("voltage_of_Aurangabad_KV").value;
 	line_flow_Wardha_Parli_MW = +document.getElementById("line_flow_Wardha_Parli_MW").value;
-	Voltage_Parli_KV = +document.getElementById("Voltage_Parli_KV").value;
+	voltage_Parli_KV = +document.getElementById("voltage_Parli_KV").value;
 	
 	// Execute the algorithm
 	if(line_flow_Akola_Aurangabad_MW >= 600){
@@ -39,14 +39,14 @@ function solve(){
 		Suggest("Reduce Mouda, Tirora, Koradi generation, infirm first");
 		Suggest("Increase Koina gen. to maintain <1500 MW in each Aurangabad Wardha ckt");
 	}
-	if(Voltage_of_Aurangabad_KV <= 746){
+	if(voltage_of_Aurangabad_KV <= 746){
 		Suggest("Switch off Bus Reactors at Aurangabad 765 or 400 kV");
 	}
 	if(line_flow_Wardha_Parli_MW >= 700){
 		Suggest("Increase Chandrapur Padge Flow");
 		Suggest("Increase Talcher Kolar Flow");
 	}
-	if(Voltage_Parli_KV <= 395)
+	if(voltage_Parli_KV <= 395)
 	{
 		Suggest("Switch off Bus Reactors at Parli");
 	}
