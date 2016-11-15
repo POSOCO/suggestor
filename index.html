@@ -7,13 +7,14 @@
     <title>Wardha Aurangabad Trip</title>
     <meta name="description" content="Wardha Aurangabad Trip">
     <meta name="author" content="SitePoint">
-
+	<link rel="stylesheet" type="text/css" href="./index.css">
     <!--[if lt IE 9]>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
     <![endif]-->
 </head>
 
 <body>
+<div class="wrapper">
 <h1>Wardha Aurangabad Trip</h1>
 line_flow_Akola_Aurangabad_MW: <input type="number" id="line_flow_Akola_Aurangabad_MW" value="600"><br><br>
 line_flow_Wardha_Aurangabad_MW: <input type="number" id="line_flow_Wardha_Aurangabad_MW" value="1500"><br><br>
@@ -25,6 +26,15 @@ voltage_Parli_KV: <input type="number" id="voltage_Parli_KV" value="450"><br><br
 <br><br>
 <div id="console" style="border: 1px solid black;width: 90%;height: 400px;overflow: scroll;"></div>
 <button onclick="clearConsole()">Clear Console</button>
+<div class="push"></div>
+</div>
+<div class='footer'
+     style='border-top: 1px solid #eee;color:#767676;font-size:0.65em'>
+    The Code for this WebApp is hosted at <a
+        href="https://github.com/POSOCO/suggestor/blob/gh-pages/index.js"
+        target="_blank"
+        style="color:#4078c0;">https://github.com/POSOCO/suggestor/blob/gh-pages/index.js</a>
+</div>
 <script src="utils.js"></script>
 <script src="index.js"></script>
 </body>
